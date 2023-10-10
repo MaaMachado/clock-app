@@ -7,7 +7,7 @@
     "icon": "./assets/clock.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/splashClock.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
