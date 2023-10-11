@@ -12,8 +12,8 @@ Exercício 2 - UC16 - Exibição de Hora Atual com useEfect
 ## ✨ Visão Geral:
 
 O aplicativo "Relógio" foi criado para testar os conhecimentos em React Native e TypeScript, servindo como uma demonstração do uso do 'useState' e 'useEffect' no desenvolvimento de aplicativos híbridos.<br>
-Uma aplicação simples de exibição da hora atual, na qual o componente 'Timer', criado na página 'index.tsx', é chamado na página 'App.tsk' para exibir o relógio na tela. Deve aparecer a hora atual, no formato 
-"HH:MM:SS" (Hora, minuto e segundo), e um botão para atualizá-la
+Uma aplicação simples de exibição da hora atual, na qual o componente 'Timer', criado na página 'staticTimer.tsx', é chamado na página 'App.tsk' para exibir o relógio na tela. Deve aparecer a hora da abertura do aplicativo, no formato 
+"HH:MM:SS" (Hora, minuto e segundo), e um botão para atualizá-la para a hora atual.
 
 ---
 
