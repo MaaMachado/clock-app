@@ -1,22 +1,27 @@
 import React, { useState, useEffect } from 'react';
 import { StyleSheet, Text, View, SafeAreaView, Button } from 'react-native';
 
-export default function Timer() {
+export default function StaticTime() {
 
   const [hora, setHora] = useState<string>('');
 
   useEffect(() => {
-    const atual = setInterval(() => {
-      const agora = new Date();
-      const horas = agora.getHours().toString().padStart(2, '0');
-      const minutos = agora.getMinutes().toString().padStart(2, '0');
-      const segundos = agora.getSeconds().toString().padStart(2, '0');
+    const agora = new Date();
+    const horas = agora.getHours().toString().padStart(2, '0');
+    const minutos = agora.getMinutes().toString().padStart(2, '0');
+    const segundos = agora.getSeconds().toString().padStart(2, '0');
 
-      setHora(`${horas}:${minutos}:${segundos}`);
-    }, 1000);
-
-    return () => clearInterval(atual);
+    setHora(`${horas}:${minutos}:${segundos}`);
   }, []);
+
+  const atualizarHora = () => {
+    const agora = new Date();
+    const horas = agora.getHours().toString().padStart(2, '0');
+    const minutos = agora.getMinutes().toString().padStart(2, '0');
+    const segundos = agora.getSeconds().toString().padStart(2, '0');
+
+    setHora(`${horas}:${minutos}:${segundos}`);
+  };
 
   return (
     <SafeAreaView style={styles.container}>
@@ -25,10 +30,11 @@ export default function Timer() {
       </View>
 
       <View style={styles.btn}>
-        <Button title="🔁Atualizar Hora" onPress={() => atual()} />
+        <Button title="🔁 Atualizar Hora" onPress={atualizarHora} />
       </View>
     </SafeAreaView> 
   );
+
 }
 
 const styles = StyleSheet.create({
@@ -40,12 +46,12 @@ const styles = StyleSheet.create({
   },
   box:{
     backgroundColor: '#19CFFC',
-    padding: 15,
+    padding: 20,
     borderRadius: 10,
     elevation: 4,
   },
   text: {
-    fontSize: 32,
+    fontSize: 45,
     fontWeight: 'bold',
     textAlign: 'center',
     color: '#004',
@@ -57,6 +63,5 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     textAlign: 'center',
     fontSize: 18,
-    padding: 10,
   }
 });
